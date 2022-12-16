@@ -10,8 +10,12 @@ import generalRoutes from "./routes/general.js";
 import managementRoutes from "./routes/management.js";
 import salesRoutes from "./routes/sales.js";
 
-dotenv.config();
+//data imports
+import User from "./models/User.js";
+import { dataUser } from "./data/index.js";
 
+/* CONFIGURATION */
+dotenv.config();
 const app = express();
 app.use(express.json());
 app.use(helmet());
@@ -43,6 +47,6 @@ mongoose
     // Product.insertMany(dataProduct);
     // ProductStat.insertMany(dataProductStat);
     // Transaction.insertMany(dataTransaction);
-    // User.insertMany(dataUser);
+    User.insertMany(dataUser);
   })
   .catch((error) => console.log(`${error} did not connect`));
