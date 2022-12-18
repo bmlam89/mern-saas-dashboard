@@ -1,22 +1,21 @@
-import express from 'express';
-import path from 'path';
-import bodyParser from 'body-parser';
-import mongoose from 'mongoose';
-import cors from 'cors';
-import dotenv from 'dotenv';
-import helmet from 'helmet';
-import morgan from 'morgan';
-import clientRoutes from "./routes/client.js";
-import generalRoutes from "./routes/general.js";
-import managementRoutes from "./routes/management.js";
-import salesRoutes from "./routes/sales.js";
+const express = require("express");
+const path = require('path');
+const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
+const cors = require('cors');
+require("dotenv").config();
+const helmet = require('helmet');
+const morgan = require('morgan');
+const clientRoutes = require("./routes/client.js");
+const generalRoutes = require("./routes/general.js");
+const managementRoutes = require("./routes/management.js");
+const salesRoutes = require("./routes/sales.js");
 
 //data imports
-import User from "./models/User.js";
-import { dataUser } from "./data/index.js";
+const User = require("./models/User.js");
+const { dataUser } = require("./data/index.js");
 
 /* CONFIGURATION */
-dotenv.config();
 const app = express();
 app.use(express.json());
 app.use(helmet());
