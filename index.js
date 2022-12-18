@@ -12,8 +12,8 @@ const managementRoutes = require("./routes/management.js");
 const salesRoutes = require("./routes/sales.js");
 
 //data imports
-const User = require("./models/User.js");
-const { dataUser } = require("./data/index.js");
+//const User = require("./models/User.js");
+//const { dataUser } = require("./data/index.js");
 
 /* CONFIGURATION */
 const app = express();
