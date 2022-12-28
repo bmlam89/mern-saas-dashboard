@@ -15,10 +15,17 @@ const salesRoutes = require("./routes/sales.js");
 //const User = require("./models/User.js");
 //const Product = require("./models/Product.js");
 //const ProductStat = require("./models/ProductStat.js");
+const Transaction = require("./models/Transaction");
+const OverallStat = require("./models/OverallStat");
+const AffiliateStat = require("./models/AffiliateStat");
+
 const { 
   dataUser,
   dataProduct,
-  dataProductStat
+  dataProductStat,
+  dataTransaction,
+  dataOverallStat,
+  dataAffiliateStat,
  } = require("./data/index.js");
 
 /* CONFIGURATION */
