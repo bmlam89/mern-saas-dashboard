@@ -13,7 +13,13 @@ const salesRoutes = require("./routes/sales.js");
 
 //data imports
 //const User = require("./models/User.js");
-//const { dataUser } = require("./data/index.js");
+//const Product = require("./models/Product.js");
+//const ProductStat = require("./models/ProductStat.js");
+const { 
+  dataUser,
+  dataProduct,
+  dataProductStat
+ } = require("./data/index.js");
 
 /* CONFIGURATION */
 const app = express();
