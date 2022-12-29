@@ -15,9 +15,9 @@ const salesRoutes = require("./routes/sales.js");
 //const User = require("./models/User.js");
 //const Product = require("./models/Product.js");
 //const ProductStat = require("./models/ProductStat.js");
-const Transaction = require("./models/Transaction");
-const OverallStat = require("./models/OverallStat");
-const AffiliateStat = require("./models/AffiliateStat");
+//const Transaction = require("./models/Transaction");
+//const OverallStat = require("./models/OverallStat");
+//const AffiliateStat = require("./models/AffiliateStat");
 
 /*const { 
   dataUser,
@@ -47,7 +47,7 @@ app.use("/sales", salesRoutes);
 /* MONGOOSE SETUP */
 const PORT = process.env.PORT || 9000;
 if(process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname,'hient/build')));
+  app.use(express.static(path.join(__dirname,'client/build')));
   app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
   })
