@@ -19,14 +19,14 @@ const Transaction = require("./models/Transaction");
 const OverallStat = require("./models/OverallStat");
 const AffiliateStat = require("./models/AffiliateStat");
 
-const { 
+/*const { 
   dataUser,
   dataProduct,
   dataProductStat,
   dataTransaction,
   dataOverallStat,
   dataAffiliateStat,
- } = require("./data/index.js");
+ } = require("./data/index.js");*/
 
 /* CONFIGURATION */
 const app = express();
@@ -47,7 +47,7 @@ app.use("/sales", salesRoutes);
 /* MONGOOSE SETUP */
 const PORT = process.env.PORT || 9000;
 if(process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname,'/client/build')));
+  app.use(express.static(path.join(__dirname,'hient/build')));
   app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
   })
